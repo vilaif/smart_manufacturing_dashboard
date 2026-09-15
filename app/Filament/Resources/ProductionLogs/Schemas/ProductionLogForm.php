@@ -40,6 +40,9 @@ class ProductionLogForm
                 DateTimePicker::make('recorded_at')
                     ->default(now())
                     ->required(),
+                Select::make('type')
+                    ->label('Type Production')
+                    ->options(['A' => 'A', 'B' => 'B', 'C' => 'C']),
             ]);
     }
 }

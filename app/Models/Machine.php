@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Machine extends Model
 {
@@ -14,9 +15,9 @@ class Machine extends Model
         'current_temperature',
     ];
 
-    public function productionLogs(): HasMany
+    public function productionLogs(): HasOne
     {
-        return $this->hasMany(ProductionLog::class);
+        return $this->hasOne(ProductionLog::class);
     }
 
 }

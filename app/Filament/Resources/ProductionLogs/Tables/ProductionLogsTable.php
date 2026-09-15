@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ProductionLogs\Tables;
 
 use App\Models\Machine;
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
@@ -40,6 +41,7 @@ class ProductionLogsTable
                     }),
                 TextColumn::make('shift')
                     ->badge(),
+                TextColumn::make('type'),
                 TextColumn::make('recorded_at')
                     ->dateTime()
                     ->sortable(),
@@ -70,6 +72,7 @@ class ProductionLogsTable
             ->recordActions([
                 ViewAction::make(),
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

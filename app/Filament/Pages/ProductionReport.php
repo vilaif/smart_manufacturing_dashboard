@@ -7,10 +7,12 @@ use Filament\Pages\Page;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\DatePicker;
 use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
 
 class ProductionReport extends Page
 {
     protected static ?string $navigationLabel = 'Production Report';
+    protected static string|\BackedEnum|null $navigationIcon = Heroicon::Document;
     protected static ?int $navigationSort = 3;
     protected string $view = 'filament.pages.production-report';
 

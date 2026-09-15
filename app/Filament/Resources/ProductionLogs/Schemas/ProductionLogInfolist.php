@@ -11,8 +11,8 @@ class ProductionLogInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('machine_id')
-                    ->numeric(),
+                TextEntry::make('machine.name')
+                    ->label('Nama Mesin'),
                 TextEntry::make('operator_name'),
                 TextEntry::make('quantity')
                     ->numeric(),
@@ -24,6 +24,7 @@ class ProductionLogInfolist
                     ->badge(),
                 TextEntry::make('recorded_at')
                     ->dateTime(),
+                TextEntry::make('type'),
                 TextEntry::make('created_at')
                     ->dateTime()
                     ->placeholder('-'),

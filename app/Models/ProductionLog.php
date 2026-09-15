@@ -15,6 +15,7 @@ class ProductionLog extends Model
         'status',
         'shift',
         'recorded_at',
+        'type',
     ];
 
     protected $casts = [

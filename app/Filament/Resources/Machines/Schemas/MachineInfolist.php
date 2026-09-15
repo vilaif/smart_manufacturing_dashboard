@@ -16,7 +16,7 @@ class MachineInfolist
                     ->badge(),
                 TextEntry::make('status')
                     ->badge(),
-                TextEntry::make('current_temperature')
+                TextEntry::make('productionLogs.temperature')
                     ->suffix('°C'),
                 TextEntry::make('created_at')
                     ->dateTime()
